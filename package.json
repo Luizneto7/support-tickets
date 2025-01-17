@@ -1,0 +1,12 @@
+{
+  "name": "support-tickets",
+  "version": "1.0.0",
+  "main": "server.js",
+  "type": "module",
+  "scripts": {
+    "dev": "node --watch src/server.js"
+  },
+  "author": "Luiz Neto",
+  "license": "ISC",
+  "description": "API de gerenciamento de tickets de suporte."
+}
