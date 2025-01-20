@@ -5,12 +5,12 @@ const database = new Database();
 
 export function routeHandler(req, res) {
   const route = routes.find((route) => {
-    return route.method && route.path == req.url;
+    return route.method === req.method && route.path === req.url;
   });
 
   if (route) {
     return route.controller({ req, res, database });
   }
 
-  return res.writeHead(404).end();
+  return res.writeHead(404).end("Route not found");
 }
